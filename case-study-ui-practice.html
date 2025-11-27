@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study – UI Practice Layout · Polyglot Creative</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
+</head>
+<body class="page-detail">
+  <div class="page">
+    <!-- Simple navbar reusing the same styles -->
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="logo">
+          <span class="logo-main">Polyglot Creative</span>
+          <span class="logo-sub">Case Study</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html#projects">← Back to projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- CASE STUDY HERO -->
+      <section class="section">
+        <h1 class="section-title">UI Practice Layout – Polyglot Creative</h1>
+        <p class="section-intro">
+          A self-directed landing page concept focused on modern layout, dark/light mode, subtle depth,
+          and scroll interactions – built to refine my design system and front-end implementation workflow.
+        </p>
+        <div class="project-links">
+          <a href="https://ui-practice-phi.vercel.app/" target="_blank" rel="noopener noreferrer">Live preview</a>
+          <a href="https://github.com/amirnapoletano/ui-practice" target="_blank" rel="noopener noreferrer">View code</a>
+          <a href="index.html#projects">Back to projects</a>
+        </div>
+      </section>
+
+            <!-- OVERVIEW -->
+      <section class="section">
+        <div class="detail-block detail-block--left">
+          <h2 class="section-title">Overview</h2>
+          <p class="section-intro">
+            This project is a landing-page style layout designed to practice structure, spacing, dark mode, and
+            subtle motion. The goal was to create a reusable system I can apply to real client work: a calm,
+            modern layout that feels fast and focused.
+          </p>
+        </div>
+      </section>
+
+            <!-- PROBLEM -->
+      <section class="section">
+        <div class="detail-block detail-block--right">
+          <h2 class="section-title">The problem</h2>
+          <p class="section-intro">
+            Many landing pages are either overloaded with content or feel empty and generic. The challenge here was
+            to design a layout that:
+          </p>
+          <ul class="detail-list">
+            <li>keeps hierarchy clear and easy to scan</li>
+            <li>uses spacing and rhythm to feel calm, not cramped</li>
+            <li>handles dark/light mode without losing contrast or depth</li>
+            <li>adds motion and glow without becoming distracting</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section">
+        <div class="detail-block detail-block--left">
+          <h2 class="section-title">Process</h2>
+          <p class="section-intro">
+            I approached this layout as both a designer and front-end developer, moving between Figma thinking
+            and code-level decisions.
+          </p>
+
+        <div class="cards-grid">
+          <article class="about-block">
+            <h3>1. Design direction</h3>
+            <p>
+              I started by defining a simple type scale and spacing system inspired by modern SaaS sites:
+              clear headings, calm body text, and generous whitespace. I kept the color palette minimal
+              and reserved accent colors for links, buttons, and key UI elements.
+            </p>
+          </article>
+
+          <article class="about-block">
+            <h3>2. Layout & components</h3>
+            <p>
+              The page is structured around a clear flow: hero, “What I do” services, projects, about, and contact.
+              Each section reuses patterns for cards, section titles, intro text, and meta pills so the whole layout
+              feels consistent and easy to extend.
+            </p>
+          </article>
+
+          <article class="about-block">
+            <h3>3. Front-end implementation</h3>
+            <p>
+              I built the layout using semantic HTML, modern CSS, and vanilla JavaScript. This includes responsive
+              grids, scroll-reveal animations, dark/light mode toggling via CSS variables, and layered shadows and
+              gradients for a premium but still calm visual feel.
+            </p>
+          </article>
+        </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section class="section">
+        <div class="detail-block detail-block--right">
+          <h2 class="section-title">Solution</h2>
+          <p class="section-intro">
+            The final layout is a polished, responsive landing page foundation that I can re-use and adapt for real
+            products. Key elements include:
+          </p>
+        <ul class="detail-list">
+          <li>Premium hero section with soft gradients and a card-like layout</li>
+          <li>Reusable service and project card components</li>
+          <li>Scroll-reveal animations with subtle staggering</li>
+          <li>Dark mode with controlled glow and vignette effects</li>
+          <li>Mobile-friendly navbar and responsive grid behavior</li>
+        </ul>
+        </div>
+      </section>
+
+      <!-- LEARNINGS -->
+            <section class="section">
+        <div class="detail-block detail-block--left">
+          <h2 class="section-title">What I learned</h2>
+          <p class="section-intro">
+            This project helped me refine both my eye for UI and my implementation workflow:
+          </p>
+        <ul class="detail-list">
+          <li>Designing a layout as a system instead of isolated sections</li>
+          <li>Using CSS custom properties to manage themes and states</li>
+          <li>Balancing depth (glow, shadows) with a calm, minimal feel</li>
+          <li>Keeping animations subtle and purposeful</li>
+          <li>Building a base I can extend into client-facing landing pages</li>
+        </ul>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section">
+        <div class="detail-block detail-block--center">
+          <h2 class="section-title">Need a clean landing page like this?</h2>
+          <p class="section-intro">
+            I design and build landing pages and small marketing sites with the same level of attention to spacing,
+            structure, and motion.
+          </p>
+        <div class="contact-actions">
+          <a class="cta" href="mailto:amirnapoletano@gmail.com">Email me</a>
+          <a class="cta light" href="index.html#projects">View more projects</a>
+        </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 Polyglot Creative Web Studio · Case study by Amir Napoletano.</p>
+    </footer>
+  </div>
+</body>
+</html>
