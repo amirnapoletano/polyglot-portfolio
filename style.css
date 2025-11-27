@@ -246,6 +246,21 @@ body.dark .hero-meta span {
   background: rgba(243, 244, 246, 0.95);
 }
 
+/* Dark mode – outlined CTA stays readable */
+body.dark .cta.light {
+  /* Keep it as an outline button on dark background */
+  background: transparent;
+  color: var(--color-text-main);              /* light text */
+  border-color: rgba(148, 163, 184, 0.8);     /* slightly stronger border */
+}
+
+/* Dark mode hover: darker pill, still high contrast */
+body.dark .cta.light:hover {
+  background: rgba(15, 23, 42, 0.95);         /* deep navy pill */
+  color: var(--color-text-main);              /* stay light text */
+  border-color: rgba(148, 163, 184, 1);       /* a bit crisper on hover */
+}
+
 /* GENERIC SECTIONS */
 
 .section {
@@ -265,6 +280,93 @@ body.dark .hero-meta span {
   margin-bottom: 2.2rem;
 }
 
+/* =========================================================
+   DETAIL PAGES (case studies, Work With Me)
+   ---------------------------------------------------------
+   Applies to any page whose <body> has class="page-detail".
+   Keeps things narrower, with a soft hero card at the top
+   so it feels consistent with the main hero.
+   ========================================================= */
+
+body.page-detail .section {
+  /* Slightly tighter vertical rhythm than homepage sections */
+  padding-block: 3.2rem 3.6rem;
+}
+
+/* First section = hero-style card */
+body.page-detail .section:first-of-type {
+  margin-top: 2rem;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.12), transparent 55%),
+    var(--color-surface);
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.12);
+}
+
+/* Dark-mode version of that hero card */
+body.dark.page-detail .section:first-of-type {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(56, 189, 248, 0.18), transparent 65%),
+    radial-gradient(circle at 80% 100%, rgba(244, 114, 182, 0.16), transparent 65%),
+    rgba(2, 6, 23, 0.96);
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.7),
+    0 0 120px rgba(56, 189, 248, 0.12);
+}
+
+/* Make the very first heading feel a bit more "hero" */
+body.page-detail .section:first-of-type .section-title {
+  font-size: clamp(2.1rem, 3vw, 2.6rem);
+}
+
+/* Detail-page lists: vertical, calm, readable */
+.detail-list {
+  list-style: disc;
+  padding-left: 1.3rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.96rem;
+  color: var(--color-text-muted);
+}
+
+.detail-list li + li {
+  margin-top: 0.25rem;
+}
+
+/* Detail page blocks: wide centered card sections, closer to hero width */
+body.page-detail .detail-block {
+  background: var(--color-surface);
+  border-radius: 22px;
+  padding: 2.4rem 2.6rem;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  max-width: 960px;        /* wider, closer to hero width */
+  margin-left: auto;
+  margin-right: auto;       /* always centered */
+}
+
+/* Keep these classes for semantics / future tweaks,
+   but visually they all behave the same for now. */
+body.page-detail .detail-block--left,
+body.page-detail .detail-block--right,
+body.page-detail .detail-block--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep spacing consistent between sections on detail pages */
+body.page-detail .section + .section {
+  margin-top: 0.5rem;
+}
+
+/* Dark-mode variants for detail blocks */
+body.dark.page-detail .detail-block {
+  background: rgba(2, 6, 23, 0.96);
+  border-color: rgba(148, 163, 184, 0.18);
+  box-shadow:
+    0 18px 55px rgba(0, 0, 0, 0.7),
+    0 0 45px rgba(56, 189, 248, 0.05);
+}
 /*
  * SCROLL REVEAL
  * -------------
@@ -370,10 +472,9 @@ body.dark .hero-meta span {
 /* SERVICES */
 
 /* Wrapper for the services section grid – keeps things consistent */
-.services .cards-grid {
-  /* On desktop, cards naturally form up to 3 columns because of max-width.
+ /* On desktop, cards naturally form up to 3 columns because of max-width.
      We keep this rule in case we later want a fixed column count. */
-}
+
 
 .service-card {
   background: var(--color-surface);
